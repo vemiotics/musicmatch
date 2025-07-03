@@ -1,6 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Creepster&family=Manufacturing+Consent&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Creepster&family=Didact+Gothic&family=Manufacturing+Consent&display=swap');
 
+@font-face {
+    font-family: 'BrokenPlanet';
+    src: url('fonts/BrokenPlanetRegular.ttf');
+}
+
 
 html {
     margin: 0;
@@ -15,18 +20,61 @@ html {
     color: #fff;
     text-transform: uppercase;
     font-size: 15px;
-    background: linear-gradient(45deg, #000000, #ff00bb);
+    background: linear-gradient(45deg, rgb(0, 255, 255), rgb(255, 0, 255));
     padding: 12px 30px;
     border-radius: 30px;
-    font-family: 'Didact Gothic', sans-serif;
 }
 
 .primary-button:hover {
-    background: linear-gradient(45deg, #ff00bb, #000000);
+    background: linear-gradient(45deg, rgb(255, 0, 255), rgb(0, 255, 255));
 }
 
 body {
     text-align: center;
+    margin: 0;
+    padding: 0;
 }
 
 /*---- Navbar ----*/
+
+nav {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+nav .nav-button {
+    color: rgb(255, 0, 255);
+    background-color: rgb(255, 255, 255);
+    font-size: 20px;
+    padding: 10px 20px;
+    border-radius: 10px;
+    border: none;
+    margin: 10px;
+}
+
+.nav-button:hover {
+    color: rgb(255, 255, 255);
+    background: rgb(255, 0, 255);
+}
+
+nav .logo-container {
+    width: 250px;
+    margin: 20px;
+}
+
+nav .logo-container .logo{
+    width: 100%;
+}
+
+/*---- Home ----*/
+.overlay {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    background: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0.65) 0%,
+        rgba(0, 0, 0, 0) 100%
+    )
+}

@@ -9,8 +9,8 @@ const Home = () => {
     }
 
     return (
-        <>
-        <Nav/>
+        <div className="overlay">
+        <Nav minimal={false} authToken={authToken}/>
         <div className = "home">
             <h1>Swipe Right</h1>
             <button className = "primary-button" onClick={handleClick}>
@@ -18,7 +18,7 @@ const Home = () => {
             </button>
 
         </div>
-        </>
+        </div>
     )
 }
 export default Home
