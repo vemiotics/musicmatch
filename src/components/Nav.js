@@ -1,10 +1,11 @@
-import colorLogo from '../images/stagecrush.png'
-import logo from '../images/stagecrush.png'
+import colorLogo from '../images/stagecrush_white.png'
+import logo from '../images/stagecrush_white.png'
 
-const Nav = ({minimal, authToken, setShowModal, showModal}) => {
+const Nav = ({minimal, authToken, setShowModal, showModal, setIsSignUp}) => {
 
     const handleClick = () => {
         setShowModal(true)
+        setIsSignUp(false)
     }
 
     return(
