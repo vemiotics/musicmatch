@@ -53,9 +53,14 @@ nav .nav-button {
     margin: 10px;
 }
 
-.nav-button:hover {
+nav .nav-button:hover {
     color: rgb(255, 255, 255);
     background: rgb(255, 0, 255);
+}
+
+nav .nav-button:disabled {
+    background-color: rgb(181, 180, 180);
+    color: rgb(150, 0, 150);
 }
 
 nav .logo-container {
@@ -77,4 +82,18 @@ nav .logo-container .logo{
         rgba(0, 0, 0, 0.65) 0%,
         rgba(0, 0, 0, 0) 100%
     )
+}
+
+
+/*---- Auth Modal ----*/
+.auth-modal {
+    position: center;
+    top: 175px;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 360px;
+    height: 600px;
+    background-color: rgb(255, 255, 255);;
+    border-radius: 10px;
+    padding: 40px;
 }
