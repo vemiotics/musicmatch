@@ -168,7 +168,6 @@ nav .logo-container .logo{
     font-size: 15px;
     border: solid 2px rgb(219, 219, 219);
     border-radius: 10px;
-    flex-direction: column;
 }
 
 .onboarding form input::-webkit-outer-spin-button,
@@ -203,7 +202,7 @@ nav .logo-container .logo{
 }
 
 .onboarding form input[type="number"]{
-    width: 10%
+    width: 50%
 }
 
 .onboarding form input[type=checkbox]{
@@ -220,4 +219,8 @@ nav .logo-container .logo{
 
 .onboarding form input[type="submit"]:hover {
     background-color: rgb(255,0,255);
+}
+
+.onboarding from .photo-container {
+    width: 100%;
 }
