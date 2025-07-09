@@ -24,12 +24,12 @@ const Onboarding = () => {
 
     const handleChange = (e) => {
         console.log('e', e);
-        const value = e.target.value;
+        const value = e.target.type === 'checkbox' ? e.target.checked : e.target.value;
         const name = e.target.name;
         console.log('value: ' + value + ' name: ' + name);
         
-        setFormData((prevState) => ({
-            ...prevState,
+        setFormData((state) => ({
+            ...state,
             [name]: value
         }))
 
@@ -101,7 +101,7 @@ const Onboarding = () => {
                                 name="gender_identity"
                                 value="man"
                                 onChange={handleChange}
-                                checked={false}
+                                checked={formData.gender_identity === "man"}
                             />
                             <label htmlFor="man-gender-identity">Man</label>                   
                             <input 
@@ -110,7 +110,7 @@ const Onboarding = () => {
                                 name="gender_identity"
                                 value="woman"
                                 onChange={handleChange}
-                                checked={false}
+                                checked={formData.gender_identity === "woman"}
                             />
                             <label htmlFor="woman-gender-identity">Woman</label>
                             <input 
@@ -119,7 +119,7 @@ const Onboarding = () => {
                                 name="gender_identity"
                                 value="nonbinary"
                                 onChange={handleChange}
-                                checked={false}
+                                checked={formData.gender_identity === "nonbinary"}
                             />
                             <label htmlFor="nonbinary-gender-identity">Nonbinary</label>
                             <input 
@@ -128,75 +128,87 @@ const Onboarding = () => {
                                 name="gender_identity"
                                 value="more"
                                 onChange={handleChange}
-                                checked={false}
+                                checked={formData.gender_identity === "more"}
                             />
                             <label htmlFor="more-gender-identity">More</label>
                         </div>
 
-                        <label htmlFor="show-gender">Show gender on my profile</label>
                         <input 
                             id="show-gender"
                             type="checkbox"
                             name="show_gender"
                             onChange={handleChange}
-                            checked={false}
+                            checked={formData.show_gender}
                         />
+                        <label htmlFor="show-gender">Show gender on my profile</label>
+                        
 
                         <label>Show Me</label>
                         <div className="multiple-input-container">
                             <input
                                 id="festival-interest"
-                                type="checkbox"
+                                type="radio"
                                 name="event_interest"
                                 value="festivals"
                                 onChange={handleChange}
-                                checked={false}
+                                checked={formData.event_interest === "festivals"}
                             />
+
                             <label htmlFor="festival-interest">Festivals</label>
+                            
                             <input
                                 id="concert-interest"
-                                type="checkbox"
+                                type="radio"
                                 name="event_interest"
                                 value="concerts"
                                 onChange={handleChange}
-                                checked={false}
+                                checked={formData.event_interest === "concerts"}
                             />
+                            
                             <label htmlFor="concert-interest">Concerts</label>
-                            <input
+                            
+                           <input
                                 id="house-interest"
-                                type="checkbox"
+                                type="radio"
                                 name="event_interest"
-                                value="house shows"
+                                value="houses"
                                 onChange={handleChange}
-                                checked={false}
+                                checked={formData.event_interest === "houses"}
                             />
+
                             <label htmlFor="house-interest">Houses</label>
+                            
                             <input
                                 id="bar-interest"
-                                type="checkbox"
+                                type="radio"
                                 name="event_interest"
                                 value="bars"
                                 onChange={handleChange}
-                                checked={false}
+                                checked={formData.event_interest === "bars"}
                             />
+
                             <label htmlFor="bar-interest">Bars</label>
+                            
                             <input
                                 id="rave-interest"
-                                type="checkbox"
+                                type="radio"
                                 name="event_interest"
                                 value="raves"
                                 onChange={handleChange}
-                                checked={false}
+                                checked={formData.event_interest === "raves"}
                             />
+                            
                             <label htmlFor="rave-interest">Raves</label>
+                            
                             <input
                                 id="everything-interest"
-                                type="checkbox"
+                                type="radio"
                                 name="event_interest"
                                 value="everything"
                                 onChange={handleChange}
-                                checked={false}
+                                checked={formData.event_interest === "everything"}
                             />
+                            
                             <label htmlFor="everything-interest">Everything</label>
                         </div>
                         <input type="submit"/>
