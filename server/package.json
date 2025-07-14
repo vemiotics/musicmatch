@@ -1,0 +1,27 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "music-match tinder clone",
+  "main": "index.js",
+  "scripts": {
+    "start:backend": "nodemon index.js",
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vemiotics/musicmatch.git"
+  },
+  "keywords": [
+    "musicmatch",
+    "tinderclone"
+  ],
+  "author": "vemiotics",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vemiotics/musicmatch/issues"
+  },
+  "homepage": "https://github.com/vemiotics/musicmatch#readme",
+  "dependencies": {
+    "nodemon": "^3.1.10"
+  }
+}
