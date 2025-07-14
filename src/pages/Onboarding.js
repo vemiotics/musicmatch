@@ -140,7 +140,7 @@ const Onboarding = () => {
                             onChange={handleChange}
                             checked={formData.show_gender}
                         />
-                        <label htmlFor="show-gender">Show gender on my profile</label>
+                        <label for="show-gender">Show gender on my profile</label>
                         
 
                         <label>Show Me</label>
